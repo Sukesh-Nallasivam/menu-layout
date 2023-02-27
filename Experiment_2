@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Menu
+        </title>
+        <style>
+			
+			*{
+				margin:0;
+				padding:0;
+				box-sizing:border-box;
+			}
+            .logo{
+				color: white;
+				font-size: 30px;
+            }
+			.logo span{
+				color:aqua;
+			}
+			
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.menu_bar{
+				background-color: navy;
+				height: 100px;
+				width: 100%;
+				display:flex;
+				align-items: center;
+				justify-content: space-between;
+				padding:0 5%;
+
+			}
+			.menu_bar ul{
+				list-style:none ;
+				display: flex;
+				
+
+			}
+			.menu_bar ul li{
+				padding: 10px 30px;
+				position: relative;
+
+			}
+			.menu_bar ul li a{
+				color: white;
+				text-decoration: none;
+				font-size: 20px;
+				transition: all 0.3s;
+			}
+			.menu_bar ul li a:hover{
+				color:white
+				background-color:brown;
+
+			}
+			
+			.dropdown_menu{
+				display: none;
+			}
+			.menu_bar ul li:hover .dropdown_menu{
+				display: block;
+				position: absolute;
+				left:0;
+				top:100%;
+				background-color:navy;
+			}
+			.menu_bar ul li:hover .dropdown_menu ul{
+				display: block;
+				margin: 10px;
+
+			}
+			.menu_bar ul li:hover .dropdown_menu ul li{
+				width: 150px;
+				padding: 10px;
+			}
+			.dropdown_menu_1{
+				display: none;
+				
+
+			}
+			.dropdown_menu ul li:hover .dropdown_menu_1{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 150px;
+				background-color: navy;
+			}
+        </style>
+    </head>
+    <body>
+        
+            <div class="menu_bar">
+				
+					<h1 class="logo">ABC <span>Inc</span></h1>
+				
+            
+            	<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>                    
+					<li><a href="#">Articles</a>
+						<div class="dropdown_menu">
+							<ul>
+								<li><a href="#">Frontend</a></li>
+								<li><a href="#">Backend</a>
+									<div class="dropdown_menu_1">
+										<ul>
+											<li><a href="#">NodeJs</a></li>
+											<li ><a href="#">Python</a></li>
+											<li ><a href="#">PHP</a></li>
+											<li ><a href="#">Java</a></li>
+											<li ><a href="#">Ruby</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        
+    </body>
+</html>
